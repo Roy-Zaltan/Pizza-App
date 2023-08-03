@@ -19,7 +19,7 @@ const Login = () => {
   const { setCurrentUser } = useContext(UserContext);
   const getUser = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/users/me", {
+      const { data } = await axios.get("https://pizza-delivery-backend-i224.onrender.com/api/users/me", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("pizzza")}`,
@@ -70,10 +70,10 @@ const Login = () => {
     if (user.email !== "" && user.password !== "") {
       let email = user.email;
       let password = user.password;
-      let url = "http://localhost:5000/api/users/login",
+      let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/login",
         requestData = { email, password };
       if (regAdmin) {
-        url = "http://localhost:5000/api/users/admin-login";
+        url = "https://pizza-delivery-backend-i224.onrender.com/api/users/admin-login";
         requestData = { email, password, secretKey };
       }
       const { status, data } = await axios.post(url, requestData, {

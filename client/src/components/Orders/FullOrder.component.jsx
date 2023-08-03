@@ -6,7 +6,7 @@ import Alert from "react-bootstrap/Alert";
 import "./Order.styles.css";
 import io from "socket.io-client";
 
-const socket = io.connect("http://localhost:5000/");
+const socket = io.connect("https://pizza-delivery-backend-i224.onrender.com/");
 
 const FullOrderComp = () => {
   const { getParticularOrder } = useContext(OrderContext);

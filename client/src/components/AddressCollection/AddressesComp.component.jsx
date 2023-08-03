@@ -39,7 +39,7 @@ const AddressesComp = (props) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const addNewAddress = async () => {
-    let url = "http://localhost:5000/api/users/profiles/add-address";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/profiles/add-address";
     const address = { ...formData, uid: uuidv4() };
     // console.log(address);
     let requestData = { address: address };

@@ -58,10 +58,10 @@ const Register = () => {
       let name = user.name.trim();
       let email = user.email.trim();
       let password = user.password.trim();
-      let url="http://localhost:5000/api/users/register";
+      let url="https://pizza-delivery-backend-i224.onrender.com/api/users/register";
       let requestData={ name, email, password };
       if(regAdmin){
-        url="http://localhost:5000/api/users/admin-register";
+        url="https://pizza-delivery-backend-i224.onrender.com/api/users/admin-register";
         requestData={ name, email, password ,secretKey}
       }
       const { status} = await axios.post(

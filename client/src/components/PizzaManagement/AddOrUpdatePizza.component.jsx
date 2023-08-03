@@ -249,7 +249,7 @@ const AddOrUpdatePizza = (props) => {
       return;
     }
     const { status } = await axios.post(
-      "http://localhost:5000/api/admin/manage-pizza/update-pizza/" +
+      "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-pizza/update-pizza/" +
         pizzaObj._id,
       pizzaformData,
       {

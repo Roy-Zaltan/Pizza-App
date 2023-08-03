@@ -1,6 +1,6 @@
 import axios from "axios";
 export const getPizzaBase = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzabase";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzabase";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export const getPizzaBase = async () => {
     }
   };
   export const getPizzaSauce = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzasauce";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzasauce";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ export const getPizzaBase = async () => {
     }
   };
   export const getPizzaVeggies = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzaveggies";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzaveggies";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export const getPizzaBase = async () => {
     }
   };
   export const getPizzaMeat = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzameat";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzameat";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ export const getPizzaBase = async () => {
     }
   };
   export const getPizzaCheese = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzacheese";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzacheese";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ export const getPizzaBase = async () => {
     }
   };
   export const getVegPizza = async () => {
-    let url = "http://localhost:5000/api/admin/manage-pizza/getpizza/veg";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-pizza/getpizza/veg";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export const getPizzaBase = async () => {
     }
   };
   export const getNonVegPizza = async () => {
-    let url = "http://localhost:5000/api/admin/manage-pizza/getpizza/nonVeg";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-pizza/getpizza/nonVeg";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",

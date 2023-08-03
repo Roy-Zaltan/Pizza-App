@@ -415,7 +415,7 @@ const sendInsufficientStockMail = async (insufficientData) => {
 
     const mailOptions = {
       from: process.env.SENDER_MAIL,
-      to: "sauravkumar48736@gmail.com", // Replace with admin email address
+      to: process.env.SENDER_MAIL, // Replace with admin email address
       subject: "Insufficient Stock Report",
       html: mailContent,
     };

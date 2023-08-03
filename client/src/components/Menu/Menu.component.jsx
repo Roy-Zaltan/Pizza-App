@@ -18,7 +18,7 @@ const Menu = () => {
   const [nonVegPizzaArr, setNonVegPizzaArr] = useState([]);
   const [loading, setLoading] = useState(true);
   const getVegPizzas = async () => {
-    let url = "http://localhost:5000/api/users/pizza-menu/getpizza/veg";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/pizza-menu/getpizza/veg";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const Menu = () => {
     }
   };
   const getNonVegPizzas = async () => {
-    let url = "http://localhost:5000/api/users/pizza-menu/getpizza/nonVeg";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/pizza-menu/getpizza/nonVeg";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",

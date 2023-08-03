@@ -16,7 +16,7 @@ const IndiPizzaCard = (props) => {
   };
   const deletePizza = async () => {
     const { status } = await axios.delete(
-      `http://localhost:5000/api/admin/manage-pizza/delete-pizza/${pizzaData._id}`,
+      `https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-pizza/delete-pizza/${pizzaData._id}`,
       {
         headers: {
           "Content-Type": "application/json",

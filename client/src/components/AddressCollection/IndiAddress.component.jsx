@@ -27,7 +27,7 @@ const IndiAddressComp = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let url = "http://localhost:5000/api/users/profiles/update-address";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/profiles/update-address";
     let requestData = { formData };
 
     const { status, data } = await axios.put(url, requestData, {
@@ -46,7 +46,7 @@ const IndiAddressComp = (props) => {
   };
 
   const deleteAddress = async () => {
-    let url = "http://localhost:5000/api/users/profiles/delete-address";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/profiles/delete-address";
     let requestData = { addressUid: addressObj.uid };
 
     const config = {

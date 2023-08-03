@@ -16,7 +16,7 @@ const IndiPizzaCheeseComp = (props) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const getPizzaCheese = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzacheese";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzacheese";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const IndiPizzaCheeseComp = (props) => {
   const deletePizzaCheese = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/admin/manage-stocks/delete/pizzacheese/${pizzaCheeseObj._id}`,
+        `https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/delete/pizzacheese/${pizzaCheeseObj._id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const IndiPizzaCheeseComp = (props) => {
     e.preventDefault();
     console.log(formData);
     const { status } = await axios.post(
-      "http://localhost:5000/api/admin/manage-stocks/update/pizzacheese/" +
+      "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/update/pizzacheese/" +
         pizzaCheeseObj._id,
       formData,
       {

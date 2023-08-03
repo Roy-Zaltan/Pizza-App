@@ -10,7 +10,7 @@ export const OrderProvider = ({ children }) => {
 
   const getOrderItems = async () => {
     const { status, data } = await axios.get(
-      "http://localhost:5000/api/users/myorders/getmyorders/" +
+      "https://pizza-delivery-backend-i224.onrender.com/api/users/myorders/getmyorders/" +
         currentUser.user,
       {
         headers: {
@@ -26,7 +26,7 @@ export const OrderProvider = ({ children }) => {
   };
   const getParticularOrder = async (orderId) => {
     const { status, data } = await axios.get(
-      "http://localhost:5000/api/users/myorders/order/" + orderId,
+      "https://pizza-delivery-backend-i224.onrender.com/api/users/myorders/order/" + orderId,
       {
         headers: {
           "Content-Type": "application/json",

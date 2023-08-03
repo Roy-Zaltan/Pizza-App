@@ -61,7 +61,7 @@ const CartCheckoutPage = () => {
   const sendConfirmationOrder = async () => {
     console.log(cartItems);
     const { status, data } = await axios.post(
-      "http://localhost:5000/api/users/pizza-menu/cart/confirm-order",
+      "https://pizza-delivery-backend-i224.onrender.com/api/users/pizza-menu/cart/confirm-order",
       { cartItems },
       {
         headers: {
@@ -140,7 +140,7 @@ const CartCheckoutPage = () => {
 
   const verifyPayment = async (razorpayDetails) => {
     const { status } = await axios.post(
-      "http://localhost:5000/api/users/payment/paymentverification",
+      "https://pizza-delivery-backend-i224.onrender.com/api/users/payment/paymentverification",
       { razorpayDetails },
       {
         headers: {
@@ -159,7 +159,7 @@ const CartCheckoutPage = () => {
         razorpayDetails
       );
       const { status, data } = await axios.post(
-        "http://localhost:5000/api/users/myorders/add-order",
+        "https://pizza-delivery-backend-i224.onrender.com/api/users/myorders/add-order",
         { orderData },
         {
           headers: {
@@ -189,7 +189,7 @@ const CartCheckoutPage = () => {
     console.log(order);
     let key = "";
     const { status, data } = await axios.get(
-      "http://localhost:5000/api/users/payment/getkey",
+      "https://pizza-delivery-backend-i224.onrender.com/api/users/payment/getkey",
       {
         headers: {
           "Content-Type": "application/json",
@@ -235,7 +235,7 @@ const CartCheckoutPage = () => {
 
   const checkOutHandler = async () => {
     const { status, data } = await axios.post(
-      "http://localhost:5000/api/users/payment/createOrders",
+      "https://pizza-delivery-backend-i224.onrender.com/api/users/payment/createOrders",
       { amount: total },
       {
         headers: {

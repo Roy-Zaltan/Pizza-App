@@ -33,7 +33,7 @@ const NavbarComp = () => {
       Swal.fire("Name cannot be empty", "", "error");
       return;
     } else {
-      let url = "http://localhost:5000/api/users/profiles/update-name",
+      let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/profiles/update-name",
         requestData = { newName: newName };
       const { status, data } = await axios.post(url, requestData, {
         headers: {
@@ -57,7 +57,7 @@ const NavbarComp = () => {
       Swal.fire("Name cannot be empty", "", "error");
       return;
     } else {
-      let url = "http://localhost:5000/api/users/profiles/update-number",
+      let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/profiles/update-number",
         requestData = { newNumber: newNumber };
       const { status, data } = await axios.post(url, requestData, {
         headers: {

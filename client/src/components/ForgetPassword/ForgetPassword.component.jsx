@@ -40,10 +40,10 @@ const ForgetPassword = () => {
     event.preventDefault();
     if (userEmail !== "") {
       let email = userEmail;
-      let url = "http://localhost:5000/api/users/forget-password",
+      let url = "https://pizza-delivery-backend-i224.onrender.com/api/users/forget-password",
         requestData = { email };
       if (regAdmin) {
-        url = "http://localhost:5000/api/users/admin/forget-password";
+        url = "https://pizza-delivery-backend-i224.onrender.com/api/users/admin/forget-password";
         requestData = { email, secretKey };
       }
       const { status} = await axios.post(url, requestData, {

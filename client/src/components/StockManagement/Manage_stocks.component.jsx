@@ -64,7 +64,7 @@ const ManageStocks = () => {
   }, []);
 
   const getPizzaBase = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzabase";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzabase";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const ManageStocks = () => {
     }
   };
   const getPizzaSauce = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzasauce";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzasauce";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const ManageStocks = () => {
     }
   };
   const getPizzaVeggies = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzaveggies";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzaveggies";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ const ManageStocks = () => {
     }
   };
   const getPizzaMeat = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzameat";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzameat";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ const ManageStocks = () => {
     }
   };
   const getPizzaCheese = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/getpizzacheese";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/getpizzacheese";
     const { status, data } = await axios.get(url, {
       headers: {
         "Content-Type": "application/json",
@@ -188,7 +188,7 @@ const ManageStocks = () => {
     setLoading(false);
   }, []);
   const addNewPizzaBase = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/add/pizzabase";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/add/pizzabase";
     const { status } = await axios.post(url, pizzaBaseformData, {
       headers: {
         "Content-Type": "application/json",
@@ -205,7 +205,7 @@ const ManageStocks = () => {
     }
   };
   const addNewPizzaSauce = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/add/pizzasauce";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/add/pizzasauce";
     const { status } = await axios.post(url, pizzaSauceformData, {
       headers: {
         "Content-Type": "application/json",
@@ -222,7 +222,7 @@ const ManageStocks = () => {
     }
   };
   const addNewPizzaVeggies = async () => {
-    let url = "http://localhost:5000/api/admin/manage-stocks/add/pizzaveggies";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/add/pizzaveggies";
     const { status } = await axios.post(url, pizzaVeggiesformData, {
       headers: {
         "Content-Type": "application/json",
@@ -240,7 +240,7 @@ const ManageStocks = () => {
   };
   const addNewPizzaMeat = async () => {
     console.log(pizzaMeatformData);
-    let url = "http://localhost:5000/api/admin/manage-stocks/add/pizzameat";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/add/pizzameat";
     const { status } = await axios.post(url, pizzaMeatformData, {
       headers: {
         "Content-Type": "application/json",
@@ -258,7 +258,7 @@ const ManageStocks = () => {
   };
   const addNewPizzaCheese = async () => {
     console.log(pizzaMeatformData);
-    let url = "http://localhost:5000/api/admin/manage-stocks/add/pizzacheese";
+    let url = "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-stocks/add/pizzacheese";
     const { status } = await axios.post(url, pizzaCheeseformData, {
       headers: {
         "Content-Type": "application/json",

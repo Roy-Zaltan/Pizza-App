@@ -9,6 +9,7 @@ const authenticate = require("../middlewares/auth");
 const randomstring = require("randomstring");
 
 const sendVerifyMail = async (name, email, userId) => {
+  console.log("Bakchodi")
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -34,11 +35,13 @@ const sendVerifyMail = async (name, email, userId) => {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log(error);
+        console.log("ho gaya")
       } else {
         console.log("Email has been sent:-", info.response);
       }
     });
   } catch (error) {
+    console.log("ho gaya")
     console.log(error);
   }
 };
@@ -108,13 +111,15 @@ router.post("/register", async (req, res) => {
         avatar,
       });
       await userProfile.save();
-      sendVerifyMail(name, email, userData._id);
+      // console.log(userProfile);
+      await sendVerifyMail(name, email, userData._id);
 
       res.status(200).json({
         msg: "Registration is successful. Please check your email to verify.",
       });
     }
   } catch (error) {
+    console.log(error)
     return res.status(500).json({ errors: [{ msg: error.message }] });
   }
 });
@@ -173,14 +178,18 @@ router.post("/admin-register", async (req, res) => {
           isAdmin:userData.isAdmin,
         });
         await userProfile.save();
+        // console.log(userProfile);
         sendVerifyMail(name, email, userData._id);
         res.status(200).json({
           msg: "Registration is Successful, Please Check your email to verify",
         });
       }
     }
-  } catch (error) {
-    return res.status(500).json({ errors: [{ msg: error.message }] });
+  } 
+  catch (error) 
+  {
+     console.log("hi")
+     return res.status(500).json({ errors: [{ msg: error.message }] });
   }
 });
 

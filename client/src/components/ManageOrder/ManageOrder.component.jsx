@@ -15,7 +15,7 @@ const ManageOrderComp = () => {
   const getAllOrders = async () => {
     try {
       const { status, data } = await axios.get(
-        "http://localhost:5000/api/admin/manage-orders/getallorders",
+        "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-orders/getallorders",
         {
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const ManageOrderComp = () => {
     const newStatus = e.target.value;
     console.log(newStatus, orderId);
     const {status} = await axios.post(
-      "http://localhost:5000/api/admin/manage-orders/update-status",
+      "https://pizza-delivery-backend-i224.onrender.com/api/admin/manage-orders/update-status",
       {status:newStatus,orderId:orderId},
       {
         headers: {
