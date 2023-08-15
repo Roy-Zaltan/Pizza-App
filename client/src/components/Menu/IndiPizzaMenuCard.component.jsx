@@ -48,15 +48,15 @@ const IndiPizzaMenuCard = (props) => {
           <p className="card-text d-flex flex-wrap mb-0">
             {pizzaData.toppings.veggies &&
               pizzaData.toppings.veggies.map((veggiesObj, idx) => (
-                <span key={idx}>{veggiesObj.veggieName},</span>
+                <span key={idx}>{veggiesObj && veggiesObj.veggieName},</span>
               ))}
             {pizzaData.toppings.cheese &&
               pizzaData.toppings.cheese.map((cheeseObj, idx) => (
-                <span key={idx}>{cheeseObj.cheeseName},</span>
+                <span key={idx}>{heeseObj && cheeseObj.cheeseName},</span>
               ))}
             {pizzaData.toppings.meat &&
               pizzaData.toppings.meat.map((meatObj, idx) => (
-                <span key={idx}>{meatObj.meatName},</span>
+                <span key={idx}>{meatObj && meatObj.meatName},</span>
               ))}
           </p>
           <p className="mb-0">
